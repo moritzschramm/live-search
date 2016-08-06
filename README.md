@@ -8,7 +8,7 @@ Enter a character or a word. While you type something in, jQuery sends an HTTP p
 2. Import "cheeses.sql" from the "sql" folder
 3. Change $db_name, $db_host, $db_user and $db_password in "inc/db_connect.php"
 
-# File structure
+# Folder/File structure
 <strong>inc folder</strong>: all back-end php files (namely database connection and the search process)<br>
 <strong>js folder</strong>: contains the javascript file which handles the inputed text and displays the results<br>
 <strong>sql folder</strong>: sql file for initialization<br>
