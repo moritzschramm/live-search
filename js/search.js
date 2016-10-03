@@ -11,10 +11,13 @@ $(document).ready(function() {
 
   });
   $("#search-input").focusin(function() {
-    $("#suggestions-container").slideDown(200);
+    $(this).addClass("input-focused");
+    $("#suggestions-container").slideDown(150);
   });
   $("#search-input").focusout(function() {
-    $("#suggestions-container").slideUp(100);
+    $("#suggestions-container").slideUp(100, function() {
+      $("#search-input").removeClass("input-focused");
+    });
   });
 })
 
@@ -40,7 +43,7 @@ function search(search_term) {
     return;
   }
 
-  $("#loader").fadeIn(300);
+  $("#loader").show();
 
   $.post("inc/search_process.php",
   {
@@ -63,7 +66,7 @@ function search(search_term) {
     }
     $("#suggestions").html(suggestions);
 
-    $("#loader").fadeOut(300);
+    $("#loader").hide();
   });
 }
 
