@@ -1,5 +1,4 @@
 # live-search
-Preview: [moritz-schramm.com/live-search](https://moritz-schramm.com/live-search)<br>
 Simple live search with jQuery, Bootstrap, PHP and MySQL.<br>
 Enter a character or a word. While you type something in, jQuery sends an HTTP post request in the background. A php script looks for similar entries in your database table (in this case names of cheeses) and returns all matching results (as JSON). After that, all results wil be shown in the dropdown under the input field.<br>If a suggestion is clicked, its content will be copied into the search field. One could also modify this, so that a suggestion is a link to another page or has some other usage.
 
